@@ -7,6 +7,7 @@
 #
 
 import sys
+import time
 
 def read_fasta_dict(filename):
     """
@@ -53,6 +54,9 @@ if not len(sys.argv) == 2:
 
 filename = sys.argv[1]
 
+# Allocate a bunch of memory so slurm can detect it
+some_data = list(range(200 * 1024 * 1024))
+
 # Read the sequences into a dictionary
 sequences = read_fasta_dict(filename)
 
@@ -62,3 +66,4 @@ for name in sequences:
     gc = gc_content_percent(sequence)
     print gc, name
     
+time.sleep(4)
