@@ -1,0 +1,3 @@
+[submodule "scicomp-python"]
+	path = scicomp-python
+	url = https://github.com/dleehr/scicomp-python
