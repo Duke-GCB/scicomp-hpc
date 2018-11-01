@@ -5,24 +5,24 @@
 #
 # Usage: python fasta_gc.py sequences.fa
 #
-
+from __future__ import print_function
 import sys
 import time
 
 def read_fasta_dict(filename):
     """
-    Reads sequences from a fasta file, and returns a dictionary that maps the 
-    sequence description (key) to the sequence (value) 
-    
+    Reads sequences from a fasta file, and returns a dictionary that maps the
+    sequence description (key) to the sequence (value)
+
     For example:
-    
+
     >seq1
     AACCGG
     >seq2
     CCTTTG
-    
+
     would result in {'seq1':'AACCGG','seq2':'CCTTG'}
-    
+
     """
     sequences = {}
     f = open(filename)
